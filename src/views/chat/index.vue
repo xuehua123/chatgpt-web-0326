@@ -131,7 +131,11 @@ async function onConversation() {
 							// eslint-disable-next-line no-mixed-spaces-and-tabs,no-tabs
 							const useAuthStores = useAuthStore()
 							useAuthStores.removeToken()
-            } else {
+            } else if (data.status === 429) {
+							ms.error(data.message)
+							const useAuthStores = useAuthStore()
+							useAuthStores.removeToken()
+						} else {
 							updateChat(
 								+uuid,
 								dataSources.value.length - 1,
