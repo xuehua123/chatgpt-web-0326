@@ -129,36 +129,34 @@ async function onConversation() {
             if (data.status === 423) {
               ms.error('异地登录，请重新登录~~~~~~~~~~')
 							// eslint-disable-next-line no-mixed-spaces-and-tabs,no-tabs
-            	throw new Error('异地登录，请重新登录')
-            }
-            updateChat(
-              +uuid,
-              dataSources.value.length - 1,
-              {
-                dateTime: new Date().toLocaleString(),
-                text: lastText + data.text ?? '',
-                inversion: false,
-                error: false,
-                loading: false,
-                conversationOptions: { conversationId: data.conversationId, parentMessageId: data.id },
-                requestOptions: { prompt: message, options: { ...options } },
-              },
-            )
+							const useAuthStores = useAuthStore()
+							useAuthStores.removeToken()
+            } else {
+							updateChat(
+								+uuid,
+								dataSources.value.length - 1,
+								{
+									dateTime: new Date().toLocaleString(),
+									text: lastText + data.text ?? '',
+									inversion: false,
+									error: false,
+									loading: false,
+									conversationOptions: { conversationId: data.conversationId, parentMessageId: data.id },
+									requestOptions: { prompt: message, options: { ...options } },
+								},
+							)
 
-            if (openLongReply && data.detail.choices[0].finish_reason === 'length') {
-              options.parentMessageId = data.id
-              lastText = data.text
-              message = ''
-              return fetchChatAPIOnce()
-            }
-            scrollToBottomIfAtBottom()
+							if (openLongReply && data.detail.choices[0].finish_reason === 'length') {
+								options.parentMessageId = data.id
+								lastText = data.text
+								message = ''
+								return fetchChatAPIOnce()
+							}
+							scrollToBottomIfAtBottom()
+						}
           }
           catch (error) {
-            // eslint-disable-next-line no-console
-            console.log(error)
-            const useAuthStores = useAuthStore()
-            useAuthStores.removeToken()
-            // ms.error(error)
+
           }
         },
       })
