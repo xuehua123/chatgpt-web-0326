@@ -25,7 +25,9 @@ export default {
     success: '操作成功',
     failed: '操作失敗',
     verify: '驗證',
-    unauthorizedTips: '未經授權，請先進行驗證。',
+    unauthorizedTips: '需要输入授权码啦',
+    freeCode: '免费体验码:tiyanyonghu',
+    vipUser: 'VIP用户请输入自己的授权码哦~~~',
     expireTime: '会员到期时间',
   },
   chat: {

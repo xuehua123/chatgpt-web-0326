@@ -26,6 +26,8 @@ export default {
     failed: 'Failed',
     verify: 'Verify',
     unauthorizedTips: 'Unauthorized, please verify first.',
+    freeCode: '免费体验码:tiyanyonghu',
+    vipUser: '捐赠用户请输入自己的授权码哦~~~',
   },
   chat: {
     placeholder: 'Ask me anything...(Shift + Enter = line break)',

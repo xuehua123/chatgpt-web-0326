@@ -90,7 +90,6 @@ function buyAuth() {
         <div class="flex-1 min-h-0 pb-4 overflow-hidden">
           <List />
         </div>
-				<a target="_blank" href="http://shop.bigcatrun.com"> 由于网站体验人数太多，现限制30分钟对话三次，想要解锁无限次对话点击链接捐献一杯咖啡换个授权码来给网站续命~http://shop.bigcatrun.com</a>
         <div class="p-4">
           <NButton block @click="handleLogout">
             重新登录
@@ -98,12 +97,12 @@ function buyAuth() {
         </div>
         <div class="p-4">
           <NButton block @click="buyAuth">
-            捐献咖啡链接
+            VIP充值链接
           </NButton>
         </div>
         <div class="p-4">
           <NButton block @click="show = true">
-             ai洗脑（下载后聊天框输入“/”就可）
+            提示词商店
           </NButton>
         </div>
       </main>

@@ -59,10 +59,12 @@ function handlePress(event: KeyboardEvent) {
       <div class="space-y-4">
         <header class="space-y-2">
           <h2 class="text-2xl font-bold text-center text-slate-800 dark:text-neutral-200">
-            403
+            授权页面
           </h2>
           <p class="text-base text-center text-slate-500 dark:text-slate-500">
-            {{ $t('common.unauthorizedTips') }}
+            {{ $t('common.unauthorizedTips') }}<br>
+						{{ $t('common.freeCode') }}<br>
+						{{ $t('common.vipUser') }}<br>
           </p>
           <Icon403 class="w-[200px] m-auto" />
         </header>
