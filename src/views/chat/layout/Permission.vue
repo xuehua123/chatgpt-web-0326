@@ -33,7 +33,6 @@ async function handleVerify() {
     await fetchVerify(tokenWithTimestamp)
     authStore.setToken(tokenWithTimestamp)
     ms.success('success')
-    window.location.reload()
   }
   catch (error: any) {
     ms.error(error.message ?? 'error')
@@ -69,6 +68,7 @@ function handlePress(event: KeyboardEvent) {
           <Icon403 class="w-[200px] m-auto" />
         </header>
         <NInput v-model:value="token" type="password" placeholder="" @keypress="handlePress" />
+				<a target="_blank" href="https://soo.bigcatrun.com">购买VIP授权码请点击此处</a>
         <NButton
           block
           type="primary"

@@ -61,6 +61,7 @@ function toggleUsingContext() {
       >
         {{ currentChatHistory?.title ?? '' }}
       </h1>
+			<a target="_blank" href="https://soo.bigcatrun.com">购买VIP授权码请点击此处</a>
       <div class="flex items-center space-x-2">
         <HoverButton @click="toggleUsingContext">
           <span class="text-xl" :class="{ 'text-[#4b9e5f]': usingContext, 'text-[#a8071a]': !usingContext }">

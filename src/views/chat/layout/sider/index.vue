@@ -64,7 +64,7 @@ function handleLogout() {
 }
 
 function buyAuth() {
-  window.open('http://shop.bigcatrun.com')
+  window.open('http://soo.bigcatrun.com')
 }
 </script>
 

@@ -48,7 +48,7 @@ onMounted(() => {
           此项目授权续费地址
           <a
             class="text-blue-600 dark:text-blue-500"
-            href="http://acc.bigcatrun.com"
+            href="http://soo.bigcatrun.com"
             target="_blank"
           >
             Github
